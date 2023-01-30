@@ -1,5 +1,7 @@
 # Install oh-my-zsh
+
 ---
+
 [***@nabang1010***](https://github.com/nabang1010)
 
 ## Install oh-my-zsh
@@ -17,7 +19,6 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 ## Install Plugins
 
 ### zsh-autosuggestions
-
 
 ```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
@@ -37,9 +38,11 @@ echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> 
 ```bash
 sudo gedit ~/.zshrc
 ```
+
 - Add plugins
 
 ```txt
+## also remove old plugin 
 plugins=(git 
         zsh-syntax-highlighting 
         zsh-autosuggestions 
@@ -48,6 +51,7 @@ plugins=(git
         web-search
         )
 ```
+
 - Soure
 
 ```bash
