@@ -1,9 +1,9 @@
-
 ### Install
 
 ```console
 sha256sum ~/Downloads/Anaconda3-2021.11-Linux-x86_64.sh
 ```
+
 ```console
 bash ~/Downloads/Anaconda3-2021.11-Linux-x86_64.sh
 ```
@@ -15,6 +15,7 @@ conda config --set auto_activate_base true
 ```
 
 ### Set the auto_activate_base off
+
 ```console
 conda config --set auto_activate_base false
 ```
@@ -48,3 +49,36 @@ condac clean --all
 ```console
 conda env export > env.yaml
 ```
+
+
+Conda auto run
+
+# Add this code to ~/bashrc file
+
+`# >>> conda initialize >>>`
+
+`# !! Contents within this block are managed by 'conda init' !!`
+
+`__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"`
+
+`if [ $? -eq 0 ]; then`
+
+`eval "$__conda_setup"`
+
+`else`
+
+`if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then`
+
+`. "/opt/anaconda3/etc/profile.d/conda.sh"`
+
+`else`
+
+`export PATH="/opt/anaconda3/bin:$PATH"`
+
+`fi`
+
+`fi`
+
+`unset __conda_setup`
+
+`# <<< conda initialize <<<`
