@@ -4,7 +4,7 @@
 
 [***@nabang1010***](https://github.com/nabang1010)
 
-## Install oh-my-zsh
+# Install oh-my-zsh
 
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
