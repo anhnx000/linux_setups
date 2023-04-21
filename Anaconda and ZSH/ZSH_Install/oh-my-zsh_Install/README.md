@@ -27,8 +27,7 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 ### zsh-syntax-highlighting
 
 ```bash
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git
-echo "source ${(q-)PWD}/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" >> ${ZDOTDIR:-$HOME}/.zshrc
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 ```
 
 ### Add Plugins to `.zshrc`
@@ -44,7 +43,7 @@ sudo gedit ~/.zshrc
 ```txt
 ## also remove old plugin 
 plugins=(git 
-        zsh-syntax-highlighting 
+        zsh-syntax-highlighting
         zsh-autosuggestions 
         history 
         aliases 
