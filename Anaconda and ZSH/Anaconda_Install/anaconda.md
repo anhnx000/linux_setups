@@ -7,11 +7,7 @@ wget https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh
 ### Install
 
 ```console
-sha256sum ~/Downloads/Anaconda3-2021.11-Linux-x86_64.sh
-```
-
-```console
-bash ~/Downloads/Anaconda3-2021.11-Linux-x86_64.sh
+bash ~/Anaconda3-2023.09-0-Linux-x86_64.sh
 ```
 
 ### Set the auto_activate_base on
