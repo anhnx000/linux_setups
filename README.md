@@ -1,3 +1,5 @@
+# ALL **YOU NEED TO CONFIG UBUNTU**
+
 # Linux config dotfiles
 
 #### [Anaconda](./Anaconda_Install/README.md)

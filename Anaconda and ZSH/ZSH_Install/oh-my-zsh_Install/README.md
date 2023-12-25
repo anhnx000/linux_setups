@@ -38,6 +38,13 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 sudo gedit ~/.zshrc
 ```
 
+or use nano or vim to edit file  if you are using SSH and cannot have a monitor
+
+```bash
+sudo nano ~/.zshrc
+```
+
+
 - Add plugins
 
 ```txt
