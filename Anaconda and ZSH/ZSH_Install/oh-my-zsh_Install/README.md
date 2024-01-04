@@ -12,8 +12,35 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 ## Install powerlevel10k
 
+***Ubuntu***
+
 ```bash
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
+```
+
+then edit `~/.zshrc` file and then search for `ZSH_THEME` and add `powerlevel10k/powerlevel10k` as it's value.
+
+The final result should look like this:
+
+```
+
+ZSH_THEME=powerlevel10k/powerlevel10k
+```
+
+And then run:
+
+```
+p10k configure
+
+```
+
+
+*MacOS home brew*
+
+```
+brew install powerlevel10k
+echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
 ```
 
 ## Install Plugins
@@ -43,7 +70,6 @@ or use nano or vim to edit file  if you are using SSH and cannot have a monitor
 ```bash
 sudo nano ~/.zshrc
 ```
-
 
 - Add plugins
 
