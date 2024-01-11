@@ -116,7 +116,7 @@
   "editor.acceptSuggestionOnEnter": "on",
   "editor.snippetSuggestions": "top",
   "workbench.colorCustomizations": {
-      "tab.activeBackground": "#ffffff",
+      // "tab.activeBackground": "#ffffff",
       "tab.activeBorder": "#ffffff",
       "tab.activeBorderTop": "#ffffff",
       "tab.activeBackground": "#0080dca6",
@@ -166,7 +166,7 @@
   "python.defaultInterpreterPath": "C:\\Users\\xuana\\anaconda3\\envs\\xanh\\python.exe",
   "workbench.editor.enablePreview": false,
   "terminal.integrated.fontFamily": "Menlo for Powerline",
-  "workbench.iconTheme": "material-icon-theme",
+  // "workbench.iconTheme": "material-icon-theme",
   "security.workspace.trust.untrustedFiles": "open",
   "editor.accessibilitySupport": "on",
   "audioCues.volume": 40,
@@ -189,15 +189,13 @@
 "editor.guides.bracketPairs": "active",
 "editor.lineNumbers": "interval",
 "editor.renderWhitespace": "boundary",
-"window.autoDetectColorScheme": true,
-"workbench.colorTheme": "Default Dark+",
 "workbench.editor.tabActionLocation": "left",
 "workbench.fontAliasing": "antialiased",
-"workbench.iconTheme": "catppuccin-mocha",
+// "workbench.iconTheme": "catppuccin-mocha",
 "workbench.list.smoothScrolling": true,
-"workbench.preferredDarkColorTheme": "Vitesse Dark",
-"workbench.preferredLightColorTheme": "Vitesse Light",
-"workbench.productIconTheme": "icons-carbon",
+// "workbench.preferredDarkColorTheme": "Vitesse Dark",
+// "workbench.preferredLightColorTheme": "Vitesse Light",
+// "workbench.productIconTheme": "icons-carbon",
 "workbench.sideBar.location": "left",
 "workbench.startupEditor": "newUntitledFile",
 "workbench.tree.expandMode": "singleClick",
@@ -457,5 +455,8 @@
   "svelte.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, houdini.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, mdsvex.config.js, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vite.config.*, vitest.config.*, webpack.config.*, windi.config.*",
   "vite.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*",
   "vue.config.*": "*.env, .babelrc*, .codecov, .cssnanorc*, .env.*, .envrc, .htmlnanorc*, .lighthouserc.*, .mocha*, .postcssrc*, .terserrc*, api-extractor.json, ava.config.*, babel.config.*, contentlayer.config.*, cssnano.config.*, cypress.*, env.d.ts, formkit.config.*, formulate.config.*, histoire.config.*, htmlnanorc.*, jasmine.*, jest.config.*, jsconfig.*, karma*, lighthouserc.*, playwright.config.*, postcss.config.*, puppeteer.config.*, rspack.config.*, svgo.config.*, tailwind.config.*, tsconfig.*, tsdoc.*, uno.config.*, unocss.config.*, vitest.config.*, webpack.config.*, windi.config.*"
-}
+},
+"workbench.iconTheme": "vscode-icons",
+"workbench.colorTheme": "GitHub Dark Colorblind (Beta)",
+"files.autoSave": "afterDelay"
 }
