@@ -10,6 +10,19 @@ wget https://repo.anaconda.com/archive/Anaconda3-2023.09-0-Linux-x86_64.sh
 bash ~/Anaconda3-2023.09-0-Linux-x86_64.sh
 ```
 
+Press `ENTER`
+
+and then press `q` to skip
+
+=>
+
+```
+Do you accept the license terms? [yes|no]
+[no] >>>
+```
+
+press `yes`
+
 ### Set the auto_activate_base on
 
 ```console
@@ -63,6 +76,7 @@ Conda auto run
 
 
 
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -78,40 +92,17 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-
-NOTE THAT IF NOT RUN ANACONDA
-
-The installer prompts “Do you wish the installer to initialize Anaconda3 by running conda init?” We recommend “yes”.
-Note: If you enter “no”, then conda will not modify your shell scripts at all. In order to initialize after the installation process is done, first run source <path to conda>/bin/activate and then run conda init.
-Note: If you are on macOS Catalina, the new default shell is zsh. You will instead need to run source <path to conda>/bin/activate followed by conda init zsh.
 ```
 
-# Add this code to ~/bashrc file
 
-`# >>> conda initialize >>>`
+**NOTE THAT IF NOT RUN ANACONDA**
 
-`# !! Contents within this block are managed by 'conda init' !!`
+The installer prompts “Do you wish the installer to initialize Anaconda3 by running conda init?” We recommend “yes”.
+Note: If you enter “no”, then conda will not modify your shell scripts at all. In order to initialize after the installation process is done, 
 
-`__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"`
+**first run source `<path to conda>`/bin/activate and then run conda init.**
 
-`if [ $? -eq 0 ]; then`
 
-`eval "$__conda_setup"`
+Note: If you are on macOS Catalina, the new default shell is zsh. 
 
-`else`
-
-`if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then`
-
-`. "/opt/anaconda3/etc/profile.d/conda.sh"`
-
-`else`
-
-`export PATH="/opt/anaconda3/bin:$PATH"`
-
-`fi`
-
-`fi`
-
-`unset __conda_setup`
-
-`# <<< conda initialize <<<`
+**You will instead need to run source `<path to conda>`/bin/activate followed by conda init zsh.**
