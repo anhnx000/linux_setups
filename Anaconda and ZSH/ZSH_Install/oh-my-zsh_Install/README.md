@@ -54,7 +54,7 @@ chsh -s /bin/zsh
 ```
 
 
-## Install Plugins
+## Install Plugins!
 
 ### zsh-autosuggestions
 
