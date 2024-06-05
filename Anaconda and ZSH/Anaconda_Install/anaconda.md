@@ -29,7 +29,7 @@ First `activate` on Anaconda:
 source ~/anaconda3/bin/activate
 ```
 
-Init `conda` : 
+Init `conda` :
 
 ```
 conda init
@@ -77,7 +77,31 @@ condac clean --all
 conda env export > env.yaml
 ```
 
-Conda auto run
+
+
+# Init Conda on ZSH
+
+return to the bash 
+
+```bash
+bash 
+```
+
+find where conda 
+
+```
+where conda
+```
+
+such as: /opt/conda/bin/conda
+
+run init zsh by this command
+
+```
+/opt/conda/bin/conda init zsh
+```
+
+# Conda auto run
 
 # ADD THIS CODE TO ~/BASHRC FILE
 
