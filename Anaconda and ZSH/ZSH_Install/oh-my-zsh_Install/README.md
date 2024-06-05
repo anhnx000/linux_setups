@@ -35,13 +35,24 @@ p10k configure
 
 ```
 
-
 *MacOS home brew*
 
 ```
 brew install powerlevel10k
 echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
 ```
+
+## Install Zsh
+
+echo $SHELL     #check Shell dang dung
+
+
+## Change default shell `bash` to `zsh`
+
+```
+chsh -s /bin/zsh
+```
+
 
 ## Install Plugins
 
@@ -84,7 +95,7 @@ plugins=(git
         )
 ```
 
-- Soure
+- Re-run soure
 
 ```bash
 source ~/.zshrc

@@ -23,6 +23,18 @@ Do you accept the license terms? [yes|no]
 
 press `yes`
 
+First `activate` on Anaconda:
+
+```
+source ~/anaconda3/bin/activate
+```
+
+Init `conda` : 
+
+```
+conda init
+```
+
 ### Set the auto_activate_base on
 
 ```console
@@ -94,15 +106,13 @@ unset __conda_setup
 
 ```
 
-
 **NOTE THAT IF NOT RUN ANACONDA**
 
 The installer prompts “Do you wish the installer to initialize Anaconda3 by running conda init?” We recommend “yes”.
-Note: If you enter “no”, then conda will not modify your shell scripts at all. In order to initialize after the installation process is done, 
+Note: If you enter “no”, then conda will not modify your shell scripts at all. In order to initialize after the installation process is done,
 
 **first run source `<path to conda>`/bin/activate and then run conda init.**
 
-
-Note: If you are on macOS Catalina, the new default shell is zsh. 
+Note: If you are on macOS Catalina, the new default shell is zsh.
 
 **You will instead need to run source `<path to conda>`/bin/activate followed by conda init zsh.**
