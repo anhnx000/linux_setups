@@ -1,8 +1,8 @@
-# Install oh-my-zsh
+# First of all: Install ZSH
 
----
-
-[***@nabang1010***](https://github.com/nabang1010)
+```
+apt install zsh
+```
 
 # Install oh-my-zsh
 
@@ -46,13 +46,11 @@ echo "source $(brew --prefix)/share/powerlevel10k/powerlevel10k.zsh-theme" >>~/.
 
 echo $SHELL     #check Shell dang dung
 
-
 ## Change default shell `bash` to `zsh`
 
 ```
 chsh -s /bin/zsh
 ```
-
 
 ## Install Plugins!
 
