@@ -77,20 +77,18 @@ condac clean --all
 conda env export > env.yaml
 ```
 
-
-
 # Init Conda on ZSH
 
-return to the bash 
+return to the bash
 
 ```bash
 bash 
 ```
 
-find where conda 
+find where conda
 
 ```
-where conda
+which conda
 ```
 
 such as: /opt/conda/bin/conda
