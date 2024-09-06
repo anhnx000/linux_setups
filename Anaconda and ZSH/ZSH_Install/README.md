@@ -22,11 +22,7 @@ echo 'source ~/powerlevel10k/powerlevel10k.zsh-theme' >>~/.zshrc
 then edit `~/.zshrc` file and then search for `ZSH_THEME` and add `powerlevel10k/powerlevel10k` as it's value.
 
 The final result should look like this:
-
-```
-
 ZSH_THEME=powerlevel10k/powerlevel10k
-```
 
 And then run:
 
