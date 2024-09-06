@@ -24,6 +24,12 @@ then edit `~/.zshrc` file and then search for `ZSH_THEME` and add `powerlevel10k
 The final result should look like this:
 ZSH_THEME=powerlevel10k/powerlevel10k
 
+You need reload `zsh` with command `source ~/.zshrc` or relaunch new terminal 
+
+```
+source ~/.zshrc
+```
+
 And then run:
 
 ```
