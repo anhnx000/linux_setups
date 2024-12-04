@@ -1,3 +1,5 @@
+# Go to root user: `sudo -i`
+
 # First of all: Install ZSH
 
 ```
