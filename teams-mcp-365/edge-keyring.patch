@@ -1,0 +1,14 @@
+diff --git a/src/common/chrome_cookies.py b/src/common/chrome_cookies.py
+index 1b28094..f0a2b76 100644
+--- a/src/common/chrome_cookies.py
++++ b/src/common/chrome_cookies.py
+@@ -47,7 +47,8 @@ _BROWSERS: dict[str, tuple[tuple[str, ...], str]] = {
+     "chrome": (("~/.config/google-chrome",), "chrome"),
+     "chromium": (("~/.config/chromium", "~/snap/chromium/common/chromium"), "chromium"),
+     "brave": (("~/.config/BraveSoftware/Brave-Browser",), "brave"),
+-    "edge": (("~/.config/microsoft-edge",), "microsoft-edge"),
++    # Edge on Linux stores its key as "Chromium Safe Storage" (application=chromium).
++    "edge": (("~/.config/microsoft-edge",), "chromium"),
+ }
+ 
+ 

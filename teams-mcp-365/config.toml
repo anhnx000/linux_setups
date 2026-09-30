@@ -1,0 +1,11 @@
+# Copy to ~/.config/mcp-auto-365-ms/config.toml and fill in your tenant.
+# Full list of options: config.example.toml in the mcp-auto-365-ms repo.
+
+[sharepoint]
+hostname = "<tenant>.sharepoint.com"
+site_path = "/sites/<YourSite>"
+
+[browser]
+# Chrome is not installed on this machine; Edge is used instead.
+name = "edge"
+profile = "Default"
