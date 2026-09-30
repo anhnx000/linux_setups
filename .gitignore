@@ -13,3 +13,6 @@ cloudflared.deb
 host-terminal/*.env
 code-server/config/
 code-server/local/
+
+# Bản điền thông tin thật, không commit (repo PUBLIC)
+claude-writing-style/CLAUDE.md
