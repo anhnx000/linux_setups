@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Chặn commit nếu gitleaks thấy secret trong phần staged.
+# Bật: git config core.hooksPath .githooks   (bỏ qua một lần: git commit --no-verify)
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "pre-commit: chưa cài gitleaks, bỏ qua quét secret (xem README gốc để cài)." >&2
+  exit 0
+fi
+exec gitleaks git --pre-commit --staged --redact --no-banner -v

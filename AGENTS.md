@@ -8,4 +8,5 @@
 - Most tracked shell scripts are not executable (`0644`); run them explicitly with `bash path/to/script.sh` or make executability an intentional change. `open-in-warp-setup/install.sh` is the maintained exception and supports `./install.sh` or `./install.sh --extension`.
 - The Open in Warp recipe is tested on Ubuntu 24.04/GNOME Nautilus 46.4; its extension path requires `python3-nautilus` and `sudo`, while the script-only path does not.
 - There are no project test commands. For shell-only edits, use `bash -n path/to/changed-script.sh`; use `shellcheck` when available, and verify documentation commands against the target Ubuntu/software version.
+- Secrets are scanned by a gitleaks pre-commit hook in `.githooks/` (enable with `git config core.hooksPath .githooks`). Use placeholders such as `/path/to/folder`, `<user>`, `example.com` instead of real paths, usernames, domains or emails.
 - `.claude/` is ignored local Claude state; do not add or commit files from it. `GUI_ubuntu/Orchis-theme` is a tracked gitlink without a `.gitmodules` mapping, so do not assume it can be initialized through normal submodule commands.
