@@ -15,9 +15,9 @@ Kết nối Claude Code với Teams, SharePoint/OneDrive và Outlook qua
 curl -LsSf https://astral.sh/uv/install.sh | sh
 
 # 2. Clone và cài
-git clone https://github.com/hotamago/mcp-auto-365-ms ~/work/proactive-prj-note/mcp-auto-365-ms
-cd ~/work/proactive-prj-note/mcp-auto-365-ms
-git apply ~/work/linux_setups/teams-mcp-365/edge-keyring.patch   # xem mục "Lỗi Edge" bên dưới
+git clone https://github.com/hotamago/mcp-auto-365-ms /path/to/mcp-auto-365-ms
+cd /path/to/mcp-auto-365-ms
+git apply /path/to/linux_setups/teams-mcp-365/edge-keyring.patch   # xem mục "Lỗi Edge" bên dưới
 ./install.sh
 ```
 
@@ -32,7 +32,7 @@ git apply ~/work/linux_setups/teams-mcp-365/edge-keyring.patch   # xem mục "L�
 
 ```bash
 mkdir -p ~/.config/mcp-auto-365-ms
-cp ~/work/linux_setups/teams-mcp-365/config.toml ~/.config/mcp-auto-365-ms/config.toml
+cp /path/to/linux_setups/teams-mcp-365/config.toml ~/.config/mcp-auto-365-ms/config.toml
 # sửa hostname / site_path cho đúng tenant
 ```
 
@@ -94,7 +94,7 @@ Kết quả mong đợi:
 Không có tool MCP trong phiên thì gọi thẳng:
 
 ```bash
-cd ~/work/proactive-prj-note/mcp-auto-365-ms
+cd /path/to/mcp-auto-365-ms
 uv run --frozen --quiet python -c "
 import sys, asyncio; sys.path.insert(0, 'src'); import server
 print(asyncio.run(server.mcp.call_tool('check_365_connection', {})).structured_content['result'])"
@@ -109,6 +109,28 @@ print(asyncio.run(server.mcp.call_tool('check_365_connection', {})).structured_c
 | Teams tools 401 | skypetoken hết hạn (~24h) → mở lại teams.microsoft.com trong Edge. |
 | SharePoint 403 `917656` | Đăng nhập lại, tick **Stay signed in**. |
 | Tool list cũ sau khi sửa code | `pkill -f "mcp-auto-365-ms/src/server.py"` (chạy riêng, đừng ghép với lệnh khác vì `pkill -f` sẽ khớp luôn shell đó). |
+
+## Tự trả lời mention trong một nhóm (tuỳ chọn)
+
+Thư mục [`auto-reply/`](auto-reply/) chạy một vòng lặp trong tmux: cứ `INTERVAL` giây gọi `claude -p`
+một lần để đọc mention mới trong **đúng một nhóm** đã cho phép và tự trả lời. Mỗi lượt là một phiên
+mới nên context không phình. Vòng lặp tạm nghỉ khi usage 5 giờ hoặc 7 ngày vượt `USAGE_LIMIT`%.
+
+Văn phong lấy từ skill [`human-voice`](../claude-human-voice/) (nạp vào system prompt mỗi lượt) và
+`CLAUDE.md` ở `WORKDIR` (xưng hô, chính sách gửi). Cài skill trước: `../claude-human-voice/install.sh`.
+
+```bash
+mkdir -p ~/.config/teams-auto-reply
+cp auto-reply/auto-reply.env.example ~/.config/teams-auto-reply/env   # điền CHAT_ID, tên, WORKDIR
+cp auto-reply/teams-auto-reply.service ~/.config/systemd/user/        # sửa /path/to/linux_setups
+systemctl --user daemon-reload
+systemctl --user enable --now teams-auto-reply.service
+tmux attach -t teams-agent                                            # xem trực tiếp
+tail -f ~/.local/state/teams-auto-reply/run.log
+```
+
+Chỉ bật cho nhóm mà mọi người đã biết và đồng ý có tin trả lời tự động. Prompt chặn gửi sang nhóm
+khác, nhưng cứ kiểm tra log vài ngày đầu.
 
 ## Lưu ý an toàn
 

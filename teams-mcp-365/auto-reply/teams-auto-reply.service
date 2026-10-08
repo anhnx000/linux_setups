@@ -1,0 +1,14 @@
+# Chép vào ~/.config/systemd/user/ và sửa đường dẫn ExecStart cho đúng nơi clone repo.
+[Unit]
+Description=Teams auto-reply agent (tmux session teams-agent)
+After=default.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+KillMode=process
+ExecStart=/bin/bash /path/to/linux_setups/teams-mcp-365/auto-reply/start-tmux.sh
+ExecStop=/usr/bin/tmux kill-session -t teams-agent
+
+[Install]
+WantedBy=default.target
