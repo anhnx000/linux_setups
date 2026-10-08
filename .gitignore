@@ -16,3 +16,4 @@ code-server/local/
 
 # Bản điền thông tin thật, không commit (repo PUBLIC)
 claude-writing-style/CLAUDE.md
+__pycache__/
