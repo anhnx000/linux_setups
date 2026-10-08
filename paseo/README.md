@@ -28,10 +28,10 @@ Wants=network-online.target
 
 [Service]
 Type=simple
-WorkingDirectory=/home/anhnx000
-Environment=PATH=/home/anhnx000/.local/bin:/home/anhnx000/.nvm/versions/node/v24.19.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+WorkingDirectory=/home/<user>
+Environment=PATH=/home/<user>/.local/bin:/home/<user>/.nvm/versions/node/v24.19.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 Environment=TERM=xterm-256color
-ExecStart=/home/anhnx000/.nvm/versions/node/v24.19.0/bin/paseo start --foreground --web-ui --port 6767
+ExecStart=/home/<user>/.nvm/versions/node/v24.19.0/bin/paseo start --foreground --web-ui --port 6767
 Restart=always
 RestartSec=5
 
@@ -89,7 +89,7 @@ Trong UI: chọn **Full Access** ở ô mode khi tạo agent.
 Cloudflare Tunnel (token-based, ingress cấu hình trên dashboard Zero Trust):
 
 ```
-vibecode.anhnx.online → Cloudflare → cloudflared → 127.0.0.1:6767
+vibecode.example.com → Cloudflare → cloudflared → 127.0.0.1:6767
 ```
 
 Cần đúng 3 thứ trong `~/.paseo/config.json`:
@@ -98,8 +98,8 @@ Cần đúng 3 thứ trong `~/.paseo/config.json`:
 {
   "daemon": {
     "listen": "127.0.0.1:6767",
-    "hostnames": ["vibecode.anhnx.online", "localhost", "127.0.0.1"],
-    "cors": { "allowedOrigins": ["https://app.paseo.sh", "https://vibecode.anhnx.online"] },
+    "hostnames": ["vibecode.example.com", "localhost", "127.0.0.1"],
+    "cors": { "allowedOrigins": ["https://app.paseo.sh", "https://vibecode.example.com"] },
     "auth": { "password": "<bcrypt hash>" }
   }
 }
@@ -122,7 +122,7 @@ Lưu dạng bcrypt cost 12 trong `daemon.auth.password`. Cơ chế xác thực l
 **Bearer token — mật khẩu chính là token**:
 
 ```bash
-curl -H "Authorization: Bearer <mật khẩu>" https://vibecode.anhnx.online/api/status
+curl -H "Authorization: Bearer <mật khẩu>" https://vibecode.example.com/api/status
 ```
 
 Chỉ `/api/health` bỏ qua auth (liveness probe, chỉ trả `{"status":"ok"}`).
@@ -135,7 +135,7 @@ Màn hình `/welcome` → **Direct connection**:
 
 | Ô | Qua Internet | Trên chính máy này |
 |---|---|---|
-| Host | `vibecode.anhnx.online` | `127.0.0.1` |
+| Host | `vibecode.example.com` | `127.0.0.1` |
 | Port | `443` | `6767` |
 | Use SSL | ☑ | ☐ |
 | Password | mật khẩu daemon | mật khẩu daemon |

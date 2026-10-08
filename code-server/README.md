@@ -40,7 +40,7 @@ for — change them for your host:
 
 - `group_add: ["125"]` — the GID of the host's `docker` group (the group that
   owns `/var/run/docker.sock`). Find yours with `getent group docker`.
-- `DOCKER_USER: anhnx000` — the code-server entrypoint renames the in-image
+- `DOCKER_USER: <user>` — the code-server entrypoint renames the in-image
   `coder` user (uid 1000) to this name at runtime.
 - `../:/code-repo` — bind-mounts the parent directory as the workspace. Point it
   at whatever you want to edit.

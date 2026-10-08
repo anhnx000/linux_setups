@@ -27,8 +27,8 @@ Khuyến nghị: cài cả 2 bằng `./install.sh --extension`.
 ## Cài nhanh (dùng script có sẵn)
 
 ```bash
-git clone <repo-của-bạn> ~/work/linux_setups   # hoặc copy thư mục này sang máy mới
-cd ~/work/linux_setups/open-in-warp-setup
+git clone <repo-của-bạn> /path/to/linux_setups   # hoặc copy thư mục này sang máy mới
+cd /path/to/linux_setups/open-in-warp-setup
 
 chmod +x install.sh
 

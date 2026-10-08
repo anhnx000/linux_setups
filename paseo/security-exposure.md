@@ -1,12 +1,12 @@
 # Đánh giá bảo mật: publish Paseo ra Internet
 
-Bối cảnh: `vibecode.anhnx.online` → Cloudflare Tunnel → `127.0.0.1:6767`.
+Bối cảnh: `vibecode.example.com` → Cloudflare Tunnel → `127.0.0.1:6767`.
 
 ## Thứ đang bị publish là gì
 
 Không phải một web app thông thường. Paseo cho phép:
 
-- Tạo agent chạy Claude Code / Codex / OpenCode với quyền của user `anhnx000`
+- Tạo agent chạy Claude Code / Codex / OpenCode với quyền của user `<user>`
 - **Codex ở mode Full Access** = `approval_policy: never`, `sandbox: danger-full-access`
 - Terminal trong workspace (`paseo terminal`)
 - Đọc/ghi mọi file mà user đọc/ghi được — bao gồm `~/.ssh/`,
@@ -88,8 +88,8 @@ Cả ba đều `127.0.0.1` nên hiện an toàn. Nhưng nếu lỡ thêm route t
 
 dash.cloudflare.com → Zero Trust → Access → Applications → Add → Self-hosted
 
-- Public hostname: `vibecode.anhnx.online`
-- Policy: `Allow` → Include → Emails → `xuananhbka@gmail.com`
+- Public hostname: `vibecode.example.com`
+- Policy: `Allow` → Include → Emails → `you@example.com`
 - Login: Google hoặc One-time PIN
 
 Access mặc định **deny-by-default**: phải khớp một policy Allow mới được qua.

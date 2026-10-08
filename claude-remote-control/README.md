@@ -16,7 +16,7 @@ Wants=network-online.target
 [Service]
 Type=simple
 WorkingDirectory=/%I
-Environment=PATH=/home/anhnx000/.local/bin:/home/anhnx000/.nvm/versions/node/v24.19.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+Environment=PATH=/home/<user>/.local/bin:/home/<user>/.nvm/versions/node/v24.19.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 Environment=TERM=xterm-256color
 ExecStart=/bin/sh -c 'exec claude remote-control --permission-mode bypassPermissions --name "$(basename "$PWD")"'
 StandardOutput=null
@@ -34,7 +34,7 @@ Lưu ý: `%I` bỏ dấu `/` đầu nên phải viết `WorkingDirectory=/%I`.
 ## Bật cho một thư mục
 
 ```bash
-DIR=/home/anhnx000/work/linux_setups
+DIR=/path/to/linux_setups
 systemctl --user enable --now "claude-rc@$(systemd-escape -p "$DIR").service"
 ```
 
@@ -52,7 +52,7 @@ Mỗi thư mục = một instance riêng, chạy song song được.
 ## Quản lý
 
 ```bash
-U="claude-rc@$(systemd-escape -p /home/anhnx000/work/linux_setups).service"
+U="claude-rc@$(systemd-escape -p /path/to/linux_setups).service"
 systemctl --user status  "$U"
 systemctl --user restart "$U"
 systemctl --user stop    "$U"

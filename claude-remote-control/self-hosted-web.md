@@ -32,7 +32,7 @@ Wants=network-online.target
 [Service]
 Type=simple
 WorkingDirectory=/%I
-Environment=PATH=/home/anhnx000/.local/bin:/home/anhnx000/.nvm/versions/node/v24.19.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+Environment=PATH=/home/<user>/.local/bin:/home/<user>/.nvm/versions/node/v24.19.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 Environment=TERM=xterm-256color
 Environment=CLAUDE_WEB_PORT=2350
 ExecStart=/bin/sh -c 'exec ttyd -d 1 -p "$CLAUDE_WEB_PORT" -i 127.0.0.1 -W \
@@ -56,7 +56,7 @@ lịch sử. Đây là điểm khác biệt chính so với chạy `ttyd claude`
 ## Bật
 
 ```bash
-DIR=/home/anhnx000/work/linux_setups
+DIR=/path/to/linux_setups
 systemctl --user enable --now "claude-web@$(systemd-escape -p "$DIR").service"
 ```
 
@@ -76,13 +76,13 @@ ExecStart=... exec ttyd -d 1 -p "$CLAUDE_WEB_PORT" -i 0.0.0.0 -W -c user:matkhau
 
 An toàn hơn: giữ `127.0.0.1` rồi SSH tunnel từ máy kia:
 ```bash
-ssh -N -L 2350:127.0.0.1:2350 anhnx000@<ip-may-nay>
+ssh -N -L 2350:127.0.0.1:2350 <user>@<ip-may-nay>
 ```
 
 ## Quản lý
 
 ```bash
-U="claude-web@$(systemd-escape -p /home/anhnx000/work/linux_setups).service"
+U="claude-web@$(systemd-escape -p /path/to/linux_setups).service"
 systemctl --user status "$U"
 systemctl --user restart "$U"
 journalctl --user -u "$U" -f

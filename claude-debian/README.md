@@ -9,7 +9,7 @@
 Trong terminal trên máy bạn (để nhập mật khẩu `sudo` khi được hỏi):
 
 ```bash
-cd ~/work/linux_setups/claude-debian
+cd /path/to/linux_setups/claude-debian
 ./install-claude-desktop.sh
 ```
 

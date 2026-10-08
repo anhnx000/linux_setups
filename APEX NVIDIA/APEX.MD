@@ -5,7 +5,7 @@ ERROR:
 
 """
 
-cwd: /home/anhnx5/work/xa_msleison/data/apex/
+cwd: /path/to/apex/
 
   Preparing metadata (setup.py) ... error
 

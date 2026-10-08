@@ -1,7 +1,7 @@
 # Host Terminal Web (ttyd) — localhost:2352, có mật khẩu
 
 Terminal của **máy chính (host)** trong trình duyệt. Mở web → hộp thoại đăng
-nhập → vào thẳng shell chạy dưới user `anhnx000` (KHÔNG phải trong Docker).
+nhập → vào thẳng shell chạy dưới user `<user>` (KHÔNG phải trong Docker).
 
 Khác `claude-web@` ở thư mục `../claude-remote-control`: cái đó chạy `claude`,
 cái này là shell trần của máy — làm được mọi thứ như terminal thật.
@@ -22,7 +22,7 @@ placeholder `user:CHANGE_ME` trong unit file. File `.env` đã được `.gitign
 
 ## Cài
 
-Chạy dưới **systemd --user** nên terminal là user `anhnx000` của máy host,
+Chạy dưới **systemd --user** nên terminal là user `<user>` của máy host,
 không cần root, không cô lập.
 
 ```bash
@@ -55,7 +55,7 @@ Sửa các `Environment=` trong `host-terminal.service` rồi
 `127.0.0.1` rồi SSH tunnel từ máy khác:
 
 ```bash
-ssh -N -L 2352:127.0.0.1:2352 anhnx000@<ip-may-nay>
+ssh -N -L 2352:127.0.0.1:2352 <user>@<ip-may-nay>
 ```
 
 ## Quản lý

@@ -11,7 +11,7 @@ services:
     group_add:
       - "125"
     environment:
-      DOCKER_USER: anhnx000
+      DOCKER_USER: <user>
     ports:
       - "127.0.0.1:8080:8080"
     volumes:

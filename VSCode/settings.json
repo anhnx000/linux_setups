@@ -52,8 +52,8 @@
       "acm-cheque-prevention-python.trycloudflare.com": "linux",
       "actors-mounting-median-mj.trycloudflare.com": "linux",
       "vbdi_CV": "linux",
-      "anhnx5": "linux",
-      "anhnx5_ngrok": "linux",
+      "my-remote": "linux",
+      "my-remote-ngrok": "linux",
       "xa": "linux",
       "xuan_anh": "linux",
       "long": "linux"
@@ -186,8 +186,8 @@
   "workbench.settings.applyToAllProfiles": [
       "backgroundCover.imagePath"
   ],
-  "backgroundCover.imagePath": "/Users/xuananh/Documents/work/background_vsc/wallpaperflare.com_wallpaper (4).jpg",
-  "backgroundCover.randomImageFolder": "/Users/xuananh/Documents/work/background_vsc",
+  "backgroundCover.imagePath": "/path/to/wallpapers/wallpaperflare.com_wallpaper (4).jpg",
+  "backgroundCover.randomImageFolder": "/path/to/wallpapers",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.guides.bracketPairs": "active",
   "editor.lineNumbers": "interval",
@@ -493,9 +493,9 @@
   "workbench.preferredLightColorTheme": "Default Dark Modern",
   "editor.minimap.enabled": true,
   "vs-kubernetes": {
-      "vscode-kubernetes.helm-path-mac": "/Users/xuananh/.vs-kubernetes/tools/helm/darwin-arm64/helm",
-      "vscode-kubernetes.kubectl-path-mac": "/Users/xuananh/.vs-kubernetes/tools/kubectl/kubectl",
-      "vscode-kubernetes.minikube-path-mac": "/Users/xuananh/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
+      "vscode-kubernetes.helm-path-mac": "/Users/<user>/.vs-kubernetes/tools/helm/darwin-arm64/helm",
+      "vscode-kubernetes.kubectl-path-mac": "/Users/<user>/.vs-kubernetes/tools/kubectl/kubectl",
+      "vscode-kubernetes.minikube-path-mac": "/Users/<user>/.vs-kubernetes/tools/minikube/darwin-arm64/minikube"
   },
   "workbench.editor.enablePreview": false,
   "editor.fontFamily": "Cosolas, Conolas, 'Consolas', JetBrains Mono",
