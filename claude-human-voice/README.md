@@ -8,7 +8,7 @@ Nội dung tổng hợp từ [Wikipedia: Signs of AI writing](https://en.wikiped
 ```
 human-voice/
 ├── SKILL.md                 # quy tắc chính, Claude nạp khi skill được gọi
-├── references/patterns.md   # 28 dấu hiệu, ví dụ trước/sau (Việt + Anh)
+├── references/patterns.md   # 29 dấu hiệu, ví dụ trước/sau (Việt + Anh)
 ├── scripts/scan.py          # quét nhanh dấu hiệu bề mặt, không cần thư viện ngoài
 └── LICENSE-humanizer        # giấy phép MIT của blader/humanizer
 ```

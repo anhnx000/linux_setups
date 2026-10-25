@@ -202,6 +202,14 @@ Sắp từ mạnh đến yếu. Nhóm A và mục 22 chỉ cần gặp một l�
 **Sau:**
 > Em đề xuất rollback bản deploy hôm qua. Lỗi do token hết hạn khi retry, tăng timeout không giải quyết được. Log em để ở ticket.
 
+### 29. Kể lại tiêu đề và nội dung của thứ đã có link
+**Dấu hiệu:** Câu báo việc chép nguyên tiêu đề dài của trang hay file, kèm mô tả trang đó có gì, rồi mới tới link. Hay gặp trong daily report và tin báo xong việc.
+**Sửa:** Nói việc đã làm bằng động từ đơn giản, gắn link vào vài chữ ngắn ("link", "ở đây", tên ngắn). Ai cần chi tiết thì bấm link.
+**Trước:**
+> Vẽ lại sơ đồ luồng thanh toán từ code nhánh mới nhất và viết giải thích code, đăng lên Confluence: Payment v2: luồng code từ request tới hàng đợi settlement
+**Sau:**
+> Đọc code module thanh toán trên nhánh mới, vẽ lại sơ đồ luồng ([link](...))
+
 ## Giữ lại
 
 Đừng sửa những thứ mang giọng riêng của người viết:
